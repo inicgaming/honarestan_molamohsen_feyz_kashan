@@ -1,0 +1,235 @@
+* {
+    direction: rtl;
+}
+body {
+    background-color: rgb(48, 48, 48) !important;
+    font-family: tahoma;
+    margin: 0;
+    padding: 0;
+
+}
+/* ------------------------------------ */
+header, footer {
+    --background: linear-gradient(to right, #13b37f 0%, #11a3c8 100%);
+    width: 100%;
+    height: 100%;
+
+    padding: 1px;
+    border-radius: 1rem;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+footer {
+    clear: both;
+    text-align: right;
+}
+/*-----------------------------------*/
+nav {
+    padding: 5px 20px 10px 5px;            
+    background-color: #202020;
+    margin: 5px 0px;     
+    color: #ffffff; 
+    border-radius: 1rem;          
+}
+/*-----------------------------------*/
+main {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-align: center; 
+    line-height: 1.5;
+}
+section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    background-color: none;
+}
+article {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+/* ------------------------------------ */
+article p{
+    text-align: justify;
+    line-height: 1.5;
+    text-align: center; 
+}                
+section h2{
+    margin-top: 0;
+    text-align: center; 
+}
+/* ------------------------------------ */
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #202020;
+    display: flex;
+}
+/* ------------------------------------ */
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+}
+nav li a:hover {
+    font-weight: bold;
+}        
+.menu ul li a {
+    text-decoration: none;
+    background-color: #202020;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+
+}
+.menu ul li a:hover {
+    font-weight: bold;
+}
+/* ------------------------------------ */
+#abs_img{
+    width: 100%;
+}
+img {
+    border-radius: 8px; /* یا 12px یا هر مقداری که دوست داری */
+}
+/* ------------------------------------ */
+.fancy-frame {
+    border-radius: 20px;
+    border: 6px solid #333;
+    padding: 8px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: inline-block;
+}
+/* ------------------------------------ */
+.card {
+    --background: linear-gradient(to right, #13b37f 0%, #11a3c8 100%);
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    border-radius: 1rem;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 30px 0px;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--background);
+    border-radius: 1rem;
+    filter: blur(40px);
+    transform: scale(0.8);
+    opacity: 0.3; /* کمی از اول دیده بشه */
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.card-info {
+    background: rgba(20, 20, 30, 0.85);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background 0.6s ease;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 0.15em;
+    margin: 0 0 12px 0;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #ffffffcc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* افکت هاور */
+.card:hover {
+    transform: translateY(-12px);
+}
+
+.card:hover::after {
+    opacity: 0.8;
+    transform: scale(0.95);
+    top: 10px;
+}
+
+.card:hover .card-info {
+    background: rgba(20, 20, 30, 0.65);
+}
+/* ------------------------------------ */
+.article-card:hover::after {
+    content: '★';
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    animation: burst 1s forwards;
+    pointer-events: none;
+}
+
+@keyframes burst {
+    0% { transform: scale(0) rotate(0); opacity: 1; }
+    100% { transform: scale(3) rotate(360deg); opacity: 0; }
+}
+/* ------------------------------------ */
+.card2{
+    --background: linear-gradient(to right, #13b37f 0%, #11a3c8 100%);
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    border-radius: 1rem;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    margin: 30px 0px;
+}
