@@ -117,6 +117,7 @@ nav li a:hover {
 }
 img {
     border-radius: 8px; /* یا 12px یا هر مقداری که دوست داری */
+    width: 50%;
 }
 /* ------------------------------------ */
 .fancy-frame {
@@ -233,3 +234,4 @@ img {
     transition: transform 0.4s ease;
     margin: 30px 0px;
 }
+
